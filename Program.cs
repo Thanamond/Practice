@@ -6,16 +6,16 @@ namespace practice1
     {
         static void Main(string[] args)
         {
-          Console.Write(" Input the multiplier : ");
-          int mult = int.Parse(Console.ReadLine());
-            int i = 1;
-            int sum = 2;
-            while (i < mult)
-            {
-                sum *= 2;
-                i++;
-            }
-            Console.WriteLine("The result is : {0}",sum);
-        }   
+          Console.Write("Input number: ");
+          int num = int.Parse(Console.ReadLine());
+          if (num >= 0)
+          {
+            Console.WriteLine(num);
+          }
+          else
+          {
+            Console.WriteLine(-num);
+          }
+        }  
     }
 }
