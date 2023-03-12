@@ -6,29 +6,39 @@ namespace practice1
     {
         static void Main(string[] args)
         {
-          Console.Write("Input seat number : ");
-          int num = int.Parse(Console.ReadLine());
+          Console.Write(" Input number :");
+          int number = int.Parse(Console.ReadLine());
 
-          for (int i = 1; i <= 4; i++)
+          switch (number)
           {
-            num++;
-            if (num == 9)
-            {
-              num = 1;
-            }
-                if (num == 10)
-                {
-                    num = 2;
-                }
-                    if (num == 11)
-                    {
-                        num = 3;
-                    }
-                        if (num == 12)
-                        {
-                            num = 4;
-                        }
-            Console.WriteLine(num);
+            case 1:
+              Console.WriteLine("yellow");
+              break;
+            case 2:
+              Console.WriteLine("orange");
+              break;
+            case 3:
+              Console.WriteLine("yellow");
+              Console.WriteLine("orange");
+              break;
+            case 4:
+              Console.WriteLine("red");
+              break;
+            case 5:
+              Console.WriteLine("yellow");
+              Console.WriteLine("red");
+              break;
+            case 6:
+              Console.WriteLine("orange");
+              Console.WriteLine("red");
+              break;
+            case 7:
+              Console.WriteLine("yellow");
+              Console.WriteLine("orange");
+              Console.WriteLine("red");
+              break;
+            default:
+              break;
           }
         }  
     }
