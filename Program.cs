@@ -6,53 +6,28 @@ namespace practice1
     {
         static void Main(string[] args)
         {
-            Console.Write("Year : ");
-            int year = int.Parse(Console.ReadLine());
-            Console.Write("Month : ");
-            int month = int.Parse(Console.ReadLine());
-            int m = 0;
-            if (month >= 1 && month <= 12)
+            Console.Write("Input the range of a wall : ");
+            string n = (Console.ReadLine());
+            int num = 0;
+            if (int.TryParse(n,out num))
             {
-                m = month;
+                if (num >= 0 && num % 2 == 0)
+                {
+                    Console.Write("{0},{1}", (num/2),(num/2+1));
+                }
+                else if (num < 0)
+                {
+                    Console.Write("Please input a positive integer.");
+                }
+                else if (num % 2 !=0)
+                {
+                    Console.Write("Please input an even positive integer.");
+                }
             }
             else
             {
-                Console.WriteLine("Invalid Month");
-                return;
+                Console.Write("Please input an integer.");
             }
-            Console.Write("Day : ");
-            int day = int.Parse(Console.ReadLine());
-            int d = 0;
-            if (day >= 1 && day <= 31)
-            {
-                d = day;
-            }
-            else
-            {
-                Console.WriteLine("Invalid day");
-                return;
-            }
-
-            if (year >= 1868 && year <= 1912 )
-            {
-                Console.WriteLine("Meji");
-            }
-            else if (year >= 1912 && year <= 1926)
-            {
-                Console.WriteLine("Taisho");
-            }
-            else if (year >= 1926 && year <= 1989)
-            {
-                Console.WriteLine("Showa");
-            }
-            else if (year >= 1989 && year <= 2019)
-            {
-                Console.WriteLine("Heisei");
-            }
-            else if (year >= 2019)
-            {
-                Console.WriteLine("Reiwa");
-            }        
-        }  
+        } 
     }
 }
