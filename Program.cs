@@ -6,17 +6,21 @@ namespace practice1
     {
         static void Main(string[] args)
         {
-          int x = int.Parse(Console.ReadLine());
-            double sum = 0;
-            double p = 1;
-            int i = 1;
-            while (i <= x)
+            string job = Console.ReadLine();
+            int year = int.Parse(Console.ReadLine());
+            int y = 0;
+            while (year < 2565)
             {
-            sum += (Math.Pow(p,2));
-            p = p + 2;
-            i++;
+                job = Console.ReadLine();
+                year = int.Parse(Console.ReadLine());
+                y = year;
+                if (year < y)
+                {
+                    Console.WriteLine(year);
+                }
             }
-            Console.WriteLine(sum);
+            //Console.WriteLine(job);
+            //Console.WriteLine(year);
         }  
     }
 }
