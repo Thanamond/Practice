@@ -6,21 +6,53 @@ namespace practice1
     {
         static void Main(string[] args)
         {
-            string job = Console.ReadLine();
+            Console.Write("Year : ");
             int year = int.Parse(Console.ReadLine());
-            int y = 0;
-            while (year < 2565)
+            Console.Write("Month : ");
+            int month = int.Parse(Console.ReadLine());
+            int m = 0;
+            if (month >= 1 && month <= 12)
             {
-                job = Console.ReadLine();
-                year = int.Parse(Console.ReadLine());
-                y = year;
-                if (year < y)
-                {
-                    Console.WriteLine(year);
-                }
+                m = month;
             }
-            //Console.WriteLine(job);
-            //Console.WriteLine(year);
+            else
+            {
+                Console.WriteLine("Invalid Month");
+                return;
+            }
+            Console.Write("Day : ");
+            int day = int.Parse(Console.ReadLine());
+            int d = 0;
+            if (day >= 1 && day <= 31)
+            {
+                d = day;
+            }
+            else
+            {
+                Console.WriteLine("Invalid day");
+                return;
+            }
+
+            if (year >= 1868 && year <= 1912 )
+            {
+                Console.WriteLine("Meji");
+            }
+            else if (year >= 1912 && year <= 1926)
+            {
+                Console.WriteLine("Taisho");
+            }
+            else if (year >= 1926 && year <= 1989)
+            {
+                Console.WriteLine("Showa");
+            }
+            else if (year >= 1989 && year <= 2019)
+            {
+                Console.WriteLine("Heisei");
+            }
+            else if (year >= 2019)
+            {
+                Console.WriteLine("Reiwa");
+            }        
         }  
     }
 }
