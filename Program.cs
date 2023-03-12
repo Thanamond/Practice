@@ -7,11 +7,16 @@ namespace practice1
         static void Main(string[] args)
         {
           int x = int.Parse(Console.ReadLine());
-
-          for (int i = 1; i <= x; i++)
-          {
-            Console.WriteLine("Hamlet");
-          }
+            double sum = 0;
+            double p = 1;
+            int i = 1;
+            while (i <= x)
+            {
+            sum += (Math.Pow(p,2));
+            p = p + 2;
+            i++;
+            }
+            Console.WriteLine(sum);
         }  
     }
 }
